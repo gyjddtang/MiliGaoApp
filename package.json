@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios-iphone": "react-native run-ios --simulator=\"iPhone 6s\"",
-    "test": "jest"
+    "test": "jest",
+    "tslint": "tslint 'src/**/*.ts?(x)'"
   },
   "dependencies": {
     "react": "16.6.3",
@@ -19,6 +20,10 @@
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.51.1",
     "react-test-renderer": "16.6.3",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
     "typescript": "^3.2.4"
   },
   "jest": {

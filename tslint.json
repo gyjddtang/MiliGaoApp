@@ -1,0 +1,43 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "jsRules": {},
+  "rules": {
+    "curly": true,
+    "interface-name": true,
+    "no-unused-expression": true,
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "member-ordering": false,
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": [false],
+    "ordered-imports": false,
+    "jsx-boolean-value": false,
+    "no-console": true,
+    "no-var-requires": false,
+    "switch-default": true,
+    "switch-final-break": true,
+    "no-switch-case-fall-through": true,
+    "newline-before-return": false,
+    "jsdoc-format": true,
+    "prefer-object-spread": true,
+    "comment-format": true,
+    "prefer-const": true,
+    "no-consecutive-blank-lines": true,
+    "import-spacing": true,
+    "no-redundant-jsdoc": true,
+    "jsx-no-lambda": false,
+    "typedef": [true, "parameter", "member-variable-declaration"], //需要定义的类型存在 
+    "typedef-whitespace": true //类型声明的冒号之前是否需要空格
+  },
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ]
+}

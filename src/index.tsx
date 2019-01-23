@@ -2,15 +2,11 @@
  * Created by MiliGao on 2019-01-21.
  */
 import * as React from 'react';
-import {View, Text} from 'react-native';
+import Home from './screens/home/index';
 
-class Index extends React.Component{
+class Index extends React.Component {
   render() {
-    return (
-      <View>
-        <Text>hello, typescript</Text>
-      </View>
-    )
+    return <Home />
   }
 }
 
