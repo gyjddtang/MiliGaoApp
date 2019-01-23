@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const React = require("react");
 const react_native_1 = require("react-native");
-const testImg_jpg_1 = require("../../assets/images/testImg.jpg");
+const testImg = require("../../assets/images/testImg.jpg");
 const data = [
     { id: 1, title: 'TypeScript测试TypeScript测试', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍' },
     { id: 2, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍' },
@@ -13,18 +13,17 @@ const data = [
     { id: 7, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍' },
     { id: 8, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍' }
 ];
+console.log(testImg);
 class Home extends React.Component {
     constructor() {
         super(...arguments);
-        this.name = 'dan';
-    }
-    renderItem({ item }) {
-        console.log(item);
-        return (React.createElement(react_native_1.View, { style: styles.itemLine },
-            React.createElement(react_native_1.Image, { source: testImg_jpg_1.default, style: styles.thumbnail }),
-            React.createElement(react_native_1.View, { style: styles.rightContainer },
-                React.createElement(react_native_1.Text, { style: styles.title }, item.title),
-                React.createElement(react_native_1.Text, { style: styles.text }, item.content))));
+        this.renderItem = ({ item }) => {
+            return (React.createElement(react_native_1.View, { style: styles.itemLine },
+                React.createElement(react_native_1.Image, { source: testImg, style: styles.thumbnail }),
+                React.createElement(react_native_1.View, { style: styles.rightContainer },
+                    React.createElement(react_native_1.Text, { style: styles.title }, item.title),
+                    React.createElement(react_native_1.Text, { style: styles.text }, item.content))));
+        };
     }
     render() {
         return (React.createElement(react_native_1.View, { style: styles.homeContainer },
