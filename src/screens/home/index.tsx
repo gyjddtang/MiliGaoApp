@@ -13,12 +13,7 @@ const data = [
   {id: 8, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'}
 ];
 
-interface IReactNavigation {
-  componentId: string;
-  testID?: string;
-}
-
-class Home extends React.Component<IReactNavigation> {
+class Home extends React.Component {
   renderItem = ({ item }: { item: any }) => {
     return (
       <View style={styles.itemLine}>
