@@ -13,7 +13,6 @@ const data = [
     { id: 7, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍' },
     { id: 8, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍' }
 ];
-console.log(testImg);
 class Home extends React.Component {
     constructor() {
         super(...arguments);
