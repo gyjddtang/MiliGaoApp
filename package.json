@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "ios-iphone": "react-native run-ios --simulator=\"iPhone 6s\"",
+    "ios": "react-native run-ios --simulator=\"iPhone 6s\"",
     "test": "jest",
     "tslint": "tslint 'src/**/*.ts?(x)'"
   },
