@@ -19,6 +19,7 @@
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.51.1",
+    "react-native-typescript-transformer": "^1.2.11",
     "react-test-renderer": "16.6.3",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",

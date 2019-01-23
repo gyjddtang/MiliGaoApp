@@ -1,23 +1,20 @@
 import * as React from 'react';
 import {View, FlatList, Text, Image, StyleSheet} from 'react-native';
-import * as testImg from '../../assets/images/testImg.jpg';
+import testImg from '../../assets/images/testImg.jpg';
 
 const data = [
   {id: 1, title: 'TypeScript测试TypeScript测试', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
-  {id: 2, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
-  {id: 3, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
-  {id: 4, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
+  {id: 2, title: '2222222222', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
+  {id: 3, title: '3333333333', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
+  {id: 4, title: '4444444444', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
   {id: 5, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
   {id: 6, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
   {id: 7, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
   {id: 8, title: '测试标题测试标题', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'}
 ];
 
-console.log(testImg);
-
-
 class Home extends React.Component {
-  renderItem = ({ item }: { item: any }) => {
+  renderItem = ({item}: {item: any}) => {
     return (
       <View style={styles.itemLine}>
         <Image source={testImg} style={styles.thumbnail} />
