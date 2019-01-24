@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {View, FlatList, Text, Image, StyleSheet} from 'react-native';
+import {View, FlatList, Text, Image} from 'react-native';
 import testImg from '../../assets/images/testImg.jpg';
+import styles from './index.styl';
 
 const data = [
   {id: 1, title: 'TypeScript测试TypeScript测试', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
@@ -24,7 +25,7 @@ class Home extends React.Component {
         </View>
       </View>
     )
-  }
+  };
 
   render() {
     return (
@@ -38,37 +39,5 @@ class Home extends React.Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  homeContainer: {
-    backgroundColor: '#cc7943'
-  },
-  itemLine: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: "space-around",
-    alignItems: "center",
-    backgroundColor: "#ffffff",
-    marginTop: 20,
-  },
-  thumbnail: {
-    width: 60,
-    height: 80
-  },
-  rightContainer: {
-    flex: 1,
-    marginHorizontal: 20
-  },
-  title: {
-    fontSize: 16,
-    color: '#333',
-    marginBottom: 10
-  },
-  text: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 16
-  }
-});
 
 export default Home;
