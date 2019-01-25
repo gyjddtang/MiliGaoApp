@@ -34,6 +34,7 @@
     "import-spacing": true,
     "no-redundant-jsdoc": true,
     "jsx-no-lambda": false,
+    "jsx-no-bind": false,
     "typedef": [true, "parameter", "member-variable-declaration"], //需要定义的类型存在 
     "typedef-whitespace": true, //类型声明的冒号之前是否需要空格
     "import-blacklist": true //允许使用import require导入具体的模块
