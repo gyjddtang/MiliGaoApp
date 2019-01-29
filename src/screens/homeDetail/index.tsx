@@ -2,29 +2,41 @@
  * Created by MiliGao on 2019-01-24.
  */
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationInjectedProps } from 'react-navigation';
+import { View, Text, Button } from 'react-native';
+import { NavigationScreenProps, NavigationStackScreenOptions } from 'react-navigation';
 import styles from './index.styl';
 
 interface IState {
-  loadingProgress: number;
-  loadingMessage: string;
+  [key: string]: any
 }
 
-class HomeDetail extends React.Component<NavigationInjectedProps, IState> {
+class HomeDetail extends React.Component<NavigationScreenProps, IState> {
+  static navigationOptions({ navigation, screenProps, navigationOptions }: NavigationScreenProps): NavigationStackScreenOptions {
+    console.log(navigation, screenProps, navigationOptions);
+
+    return {
+      title: 'Detail',
+      headerTransparent: true,
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      }
+    }
+  };
+
   state: IState = {
     loadingProgress: 0,
     loadingMessage: '',
   };
 
-  componentDidMount(): void {
-    console.log(this.props.navigation);
-  }
-
   render() {
+    const { navigation } = this.props;
+    const title: string = navigation.getParam('title');   // getParam 第二个参数可设置获取失败的返回值
+
     return (
       <View style={styles.homeDetail}>
-        <Text>12345yef;b,lwmblmw;,;f,ef</Text>
+        <Text>{ title }</Text>
+        <Button title="go full-screen modal" onPress={() => this.props.navigation.navigate('Modal')} />
       </View>
     )
   }

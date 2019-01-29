@@ -1,10 +1,16 @@
 import * as React from 'react';
 import {View, FlatList, Text, Image, TouchableOpacity} from 'react-native';
-import { NavigationInjectedProps } from 'react-navigation';
-import testImg from '../../assets/images/testImg.jpg';
+import { NavigationScreenProps, NavigationStackScreenOptions } from 'react-navigation';
+import testImg from 'assets/images/testImg.jpg';
 import styles from './index.styl';
 
-const data = [
+interface IDataItem {
+  id: number;
+  title: string;
+  content: string;
+}
+
+const data: IDataItem[] = [
   {id: 1, title: 'TypeScript测试TypeScript测试', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
   {id: 2, title: '1111111111', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
   {id: 3, title: '2222222222', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'},
@@ -15,15 +21,27 @@ const data = [
   {id: 8, title: '7777777777', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'}
 ];
 
-class Home extends React.Component<NavigationInjectedProps> {
-  goDetail(): void {
+class Home extends React.Component<NavigationScreenProps> {
+  static navigationOptions: NavigationStackScreenOptions = {
+    title: 'Home',
+    headerStyle: {
+      backgroundColor: '#FE8400',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    }
+  };
+
+  goDetail(item: IDataItem): void {
     const { navigation } = this.props;
-    navigation.navigate('HomeDetail');
+    // navigation.navigate('HomeDetail', item);   // 将新路由推送到堆栈导航器，如果它尚未在堆栈中，则跳转到该页面。
+    navigation.push('HomeDetail', item);   // 都向导航堆栈中添加新路由。
   }
 
-  renderItem({ item }: { item: any }): JSX.Element {
+  renderItem({ item }: { item: IDataItem }): JSX.Element {
     return (
-      <TouchableOpacity style={styles.itemLine} onPress={() => this.goDetail()}>
+      <TouchableOpacity style={styles.itemLine} onPress={() => this.goDetail(item)}>
         <Image source={testImg} style={styles.thumbnail} />
         <View style={styles.rightContainer}>
           <Text style={styles.title}>{ item.title }</Text>

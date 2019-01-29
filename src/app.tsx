@@ -5,14 +5,31 @@ import * as React from 'react';
 import { createStackNavigator } from 'react-navigation';
 import Home from 'screens/home';
 import HomeDetail from 'screens/homeDetail';
+import FullModal from 'screens/fullModal';
+
+const MainStack = createStackNavigator(
+  {
+    Home: {
+      screen: Home
+    },
+    HomeDetail: {
+      screen: HomeDetail
+    }
+  }
+);
 
 const RootStack = createStackNavigator(
   {
-    Home,
-    HomeDetail
+    Main: {
+      screen: MainStack,
+    },
+    Modal: {
+      screen: FullModal
+    },
   },
   {
-    initialRouteName: "Home"
+    mode: 'card',   // 渲染和转换的样式  card | modal
+    headerMode: 'none'   // 页眉的呈现方式  float | screen | none
   }
 );
 
