@@ -1,17 +1,7 @@
 {
-  "home": {
-    "please_input_your_password": "请输入你的密码",
-    "please_set_your_password": "请设置你的密码",
-    "please_repeat_your_password": "请重复你的密码",
-    "password_wrong": "密码错误，请重新输入"
-  },
   "global": {
     "zh": "中文",
     "en": "英文",
-    "personal_center": "个人中心",
-    "login_with_phone": "手机登录",
-    "login_with_email": "邮箱登录",
-    "placeholder_enter_email": "请输入邮箱",
-    "placeholder_enter_phone": "请输入手机号码"
+    "personal_center": "个人中心"
   }
 }

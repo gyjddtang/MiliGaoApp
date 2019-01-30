@@ -8,6 +8,7 @@ const i18n = i18next
   .use(reactI18nextModule)
   .init(
     {
+      lng: 'zh',
       fallbackLng: 'zh',   // 如果无法使用指定语言翻译，则使用的语言。
       fallbackNS: 'global',   // 如果在给定的命名空间中找不到要查找键则在哪个命名空间下查找
       debug: false,
