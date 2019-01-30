@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {View, FlatList, Text, Image, TouchableOpacity} from 'react-native';
 import { NavigationScreenProps, NavigationStackScreenOptions } from 'react-navigation';
+// import { LayoutComponent } from 'react-native-navigation/lib/dist/interfaces/Layout';
+import { WithNamespaces, withNamespaces } from 'react-i18next';
 import testImg from 'assets/images/testImg.jpg';
 import styles from './index.styl';
 
@@ -8,6 +10,10 @@ interface IDataItem {
   id: number;
   title: string;
   content: string;
+}
+
+interface IProps extends WithNamespaces, NavigationScreenProps {
+  like?: string;
 }
 
 const data: IDataItem[] = [
@@ -21,7 +27,8 @@ const data: IDataItem[] = [
   {id: 8, title: '7777777777', content: '内容介绍内容介绍内容介绍内容介绍内容介绍内容介绍'}
 ];
 
-class Home extends React.Component<NavigationScreenProps> {
+@(withNamespaces('home') as any)
+class Home extends React.Component<IProps> {
   static navigationOptions: NavigationStackScreenOptions = {
     title: 'Home',
     headerStyle: {

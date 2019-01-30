@@ -5,6 +5,7 @@ import * as React from 'react';
 import { Text } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { initI18n } from 'i18n';
 import Home from 'screens/home';
 import HomeDetail from 'screens/homeDetail';
 import FullModal from 'screens/fullModal';
@@ -27,7 +28,7 @@ const MineStack = createStackNavigator(
       screen: Mine
     },
     Modal: {
-      screen: FullModal
+      screen: FullModal,
     }
   },
   {
@@ -75,6 +76,10 @@ const RootStack = createBottomTabNavigator(
 );
 
 class App extends React.Component {
+  componentDidMount(): void {
+    initI18n();
+  }
+
   render() {
     return (
       <RootStack />

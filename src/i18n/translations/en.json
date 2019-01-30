@@ -1,0 +1,23 @@
+{
+  "home": {
+    "please_input_your_password": "请输入你的密码",
+    "please_set_your_password": "请设置你的密码",
+    "please_repeat_your_password": "请重复你的密码",
+    "password_wrong": "密码错误，请重新输入"
+  },
+  "global": {
+    "zh": "Chinese",
+    "en": "English",
+    "personal_center": "personal center",
+    "language": "es",
+    "money_unit": "USD",
+    "save_baochun": "Guardar",
+    "save_tijiao": "Enviar",
+    "lab_second": "Segundo",
+    "bt_reset": "Reiniciar",
+    "main_tab_item_01": "Sobres rojos",
+    "main_tab_item_02": "Mensajes",
+    "main_tab_item_03": "Comercio",
+    "main_tab_item_04": "Yo"
+  }
+}
