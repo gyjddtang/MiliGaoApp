@@ -6,6 +6,8 @@ import { Text } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { initI18n } from 'i18n';
+import { Provider } from 'mobx-react/native';
+import { Store } from 'stores';
 import Home from 'screens/home';
 import HomeDetail from 'screens/homeDetail';
 import FullModal from 'screens/fullModal';
@@ -76,13 +78,16 @@ const RootStack = createBottomTabNavigator(
 );
 
 class App extends React.Component {
-  componentDidMount(): void {
+  async componentDidMount() {
     initI18n();
+    await Store.hydrate();
   }
 
   render() {
     return (
-      <RootStack />
+      <Provider store={Store}>
+        <RootStack />
+      </Provider>
     )
   }
 }
