@@ -6,6 +6,11 @@ export const Auth = types
     userName: types.optional(types.string, 'miliGao')
   })
   .actions(self => ({
+    changeName(name: string): void {
+      self.userName = name;
+    }
+  }))
+  .actions(self => ({
     hydrate: flow(function* () {
       const data = yield AsyncStorage.getItem(`aaa`);
       if (data) {

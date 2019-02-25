@@ -20,7 +20,7 @@ interface IProps extends NavigationScreenProps, IStore {
 @observer
 class HomeDetail extends React.Component<IProps, IState> {
   static navigationOptions({ navigation, screenProps, navigationOptions }: NavigationScreenProps): NavigationStackScreenOptions {
-    console.log(navigation, screenProps, navigationOptions);
+    // console.log(navigation, screenProps, navigationOptions);
 
     return {
       title: 'Detail',
@@ -37,6 +37,10 @@ class HomeDetail extends React.Component<IProps, IState> {
     loadingMessage: '',
   };
 
+  changeName(): void {
+    this.props.auth.changeName('MG & MB');
+  }
+
   render() {
     const { navigation, auth } = this.props;
     const title: string = navigation.getParam('title');   // getParam 第二个参数可设置获取失败的返回值
@@ -45,6 +49,7 @@ class HomeDetail extends React.Component<IProps, IState> {
       <View style={styles.homeDetail}>
         <Text>Hello {auth.userName}</Text>
         <Text>{ title }</Text>
+        <Button title='change name (mobx-state-tree)' onPress={() => this.changeName()} />
         <Button title="go full-screen modal" onPress={() => this.props.navigation.navigate('Modal')} />
       </View>
     )
